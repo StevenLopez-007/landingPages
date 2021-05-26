@@ -1,0 +1,229 @@
+<app-side-bar></app-side-bar>
+<mat-toolbar appScrollHideToolbar color="primary" class="mat-elevation-z0">
+  <button (click)="showSideBar()" mat-icon-button class="example-icon hidden-sm-up">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>LandingPage</span>
+  <span class="example-spacer"></span>
+  <button class="example-icon hidden-xs-down">
+    HOME
+  </button>
+  <button class="example-icon hidden-xs-down">
+    CONTACT
+  </button>
+  <button class="example-icon hidden-xs-down">
+    ABOUT
+  </button>
+
+</mat-toolbar>
+<scroll-bar-progress color="#02c29b"></scroll-bar-progress>
+<div #container class="container-fluid">
+  <div class="row seccion1">
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,12L80,24C160,36,320,60,480,60C640,60,800,36,960,24C1120,12,1280,12,1440,28C1600,44,1760,76,1920,90C2080,104,2240,100,2400,84C2560,68,2720,40,2880,42C3040,44,3200,76,3360,92C3520,108,3680,108,3840,94C4000,80,4160,52,4320,38C4480,24,4640,24,4800,28C4960,32,5120,40,5280,46C5440,52,5600,56,5760,58C5920,60,6080,60,6240,56C6400,52,6560,44,6720,44C6880,44,7040,52,7200,60C7360,68,7520,76,7680,68C7840,60,8000,36,8160,24C8320,12,8480,12,8640,20C8800,28,8960,44,9120,44C9280,44,9440,28,9600,34C9760,40,9920,68,10080,78C10240,88,10400,80,10560,72C10720,64,10880,56,11040,48C11200,40,11360,32,11440,28L11520,24L11520,120L11440,120C11360,120,11200,120,11040,120C10880,120,10720,120,10560,120C10400,120,10240,120,10080,120C9920,120,9760,120,9600,120C9440,120,9280,120,9120,120C8960,120,8800,120,8640,120C8480,120,8320,120,8160,120C8000,120,7840,120,7680,120C7520,120,7360,120,7200,120C7040,120,6880,120,6720,120C6560,120,6400,120,6240,120C6080,120,5920,120,5760,120C5600,120,5440,120,5280,120C5120,120,4960,120,4800,120C4640,120,4480,120,4320,120C4160,120,4000,120,3840,120C3680,120,3520,120,3360,120C3200,120,3040,120,2880,120C2720,120,2560,120,2400,120C2240,120,2080,120,1920,120C1760,120,1600,120,1440,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+      </path>
+    </svg>
+
+    <div class="col-lg-6 pl-lg-5 d-flex justify-content-center align-items-center flex-column">
+      <div class="titles pl-lg-5">
+        <h1 data-aos="zoom-in" >MEET YOUR FUTURE GOALS WITH MUTUAL FUNDS</h1>
+        <div data-aos-delay="200" data-aos="zoom-in" class="subtitles">
+          <p>Invest in best Equity Linked Savings Schema to save taxes.</p>
+          <p>Grow your money by investing in our best Mutual Funds.</p>
+        </div>
+      </div>
+      <div data-aos-delay="400" data-aos="zoom-in" class="buttons pl-lg-5">
+        <button class="button">SAVE TAXES</button>
+        <button class="button">GROW MONEY</button>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" class="col-lg-6 hidden-md-down imgSeccion1">
+    </div>
+
+    <button [ngxScrollToOffset]="-50" [ngxScrollToEasing]="'easeInOutQuint'" [ngxScrollTo]="seccion2" class="buttonGoTo hidden-md-down"><mat-icon>expand_more</mat-icon></button>
+  </div>
+
+
+  <!-- Seccion 2 -->
+
+  <div #seccion2 class="row seccion2 mt-seccion pb-3">
+    <div class="title1">
+      <h1>KNOW ABOUT TAX SAVING</h1>
+    </div>
+    <div class="col-lg-4 mt-lg-5 cards">
+      <div data-aos="fade-right" class="col-lg-12" *ngFor="let item of contentSeccion2.content1">
+        <mat-card class="mat-elevation-z0 ">
+          <mat-card-header>
+            <mat-card-title>{{item.title}}</mat-card-title>
+            <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" class="col-lg-4 hidden-md-down imgSeccion2">
+    </div>
+
+    <div class="col-lg-4 mt-lg-5 cards">
+      <div data-aos="fade-left" class="col-lg-12" *ngFor="let item of contentSeccion2.content2">
+        <mat-card class="mat-elevation-z0 ">
+          <mat-card-header class="rightSide">
+            <mat-card-title>{{item.title}}</mat-card-title>
+            <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+    <button [ngxScrollToOffset]="0" [ngxScrollToEasing]="'easeInOutQuint'" [ngxScrollTo]="seccion4" class="buttonGoTo hidden-md-down"><mat-icon>expand_more</mat-icon></button>
+  </div>
+
+  <!-- Seccion 3 -->
+
+  <div class="row seccion3 mt-seccion">
+    <div data-aos="zoom-in" class="col-lg-6 pl-5 d-flex justify-content-center align-items-start flex-column titles">
+      <h2>Compare your returns in ElSS with other schemes</h2>
+      <h4>Investment per month for 5 years</h4>
+    </div>
+
+    <div class="col-lg-6 pr-xl-5 pr-lg-4" data-aos="zoom-in">
+      <mat-card class="cardSeccion3 mat-elevation-z8">
+        <mat-card-content>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <h3>Bank fixed deposit</h3>
+              <h3 class="subtitle">$ 8000</h3>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12  hidden-md-up">
+              <div class="buttons">
+                <button>National Savings Certi</button>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <h3>Public Provident Fund</h3>
+              <h3 class="subtitle">$9000</h3>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 hidden-md-up">
+              <div class="buttons">
+                <button>ELSS</button>
+              </div>
+            </div>
+          </div>
+
+        </mat-card-content>
+        <mat-card-footer class="hidden-sm-down">
+          <div class="buttons">
+            <button>National Savings Certi</button>
+            <button>ELSS</button>
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Seccion4 -->
+
+  <div #seccion4 class="row mt-seccion seccion4">
+    <div data-aos-offset="250" data-aos="fade-up" class="col-lg-6 imgSeccion4 hidden-md-down">
+    </div>
+    <div class="col-lg-6">
+      <div class="row justify-content-center row-cols-1 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+        <div data-aos-delay-none [attr.data-aos-delay]="i*200"  data-aos-offset="200" data-aos="zoom-in" class="col-10 col-sm-10" *ngFor="let item of contentSeccion4;let i= index" attr.data-index="i">
+          <mat-card class="cards mat-elevation-z0">
+            <div class="d-flex justify-content-center align-items-center imgCard">
+              <img mat-card-image [src]="item.img" alt="">
+            </div>
+            <mat-card-header>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 d-flex justify-content-center">
+      <button class="button">GROW MONEY</button>
+    </div>
+  </div>
+
+  <!-- Seccion 5 -->
+
+  <div class="row mt-seccion seccion5" >
+    <div class="col-12">
+      <div class="title1">
+        <h1>INVESTING IN MUTUAL FUNDS IS EASY</h1>
+      </div>
+      <p class="paragraph mt-lg-5">Thanks to the digital wave, you can easily access mutual funds nowadays. You may
+        invest in mutual <br>
+        funds using any of the below options.
+      </p>
+    </div>
+
+    <div data-aos-offset="250" data-aos-delay-none [attr.data-aos-delay]="i*250" data-aos="zoom-in" class="col-lg-4" *ngFor="let item of contentSeccion5; let i = index" attr.data-index="i">
+      <mat-card class="cards mat-elevation-z0 ">
+        <div class="d-flex justify-content-center align-items-center imgCard">
+          <img mat-card-image [src]="item.img" alt="">
+        </div>
+        <mat-card-header>
+          <mat-card-title>{{item.title}}</mat-card-title>
+          <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Seccion6 -->
+  <div class="row seccion6">
+    <img src="../../../assets/landingPage1/footer/wave.svg" alt="">
+    <div class="col-lg-12 mt-seccion">
+      <div class="title1">
+        <h1>WHAT OUR INVESTORS SAY</h1>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <swiper [pagination]="breakPoint<768?{ clickable: true }:false" [autoplay]="true" [slidesPerView]="1" [spaceBetween]="0" [navigation]="breakPoint<768?false:true">
+        <ng-template swiperSlide *ngFor="let item of [1,2,3,4,5,6,7,8,10]">
+          <div class="swiperContent">
+            <div>
+              <h1>SUSHIL BANSAL</h1>
+              <h3>CEO, DAILY NEWS & ANALYSIS</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos fuga quae nisi magni! Debitis ipsa,
+              quisquam nesciunt, dignissimos id eaque magnam nihil dolore sed necessitatibus modi molestias sunt animi
+              quis?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi vitae labore qui deserunt non sed eos
+              incidunt ipsum, officiis sunt id minus doloribus laboriosam. Quos iusto est voluptatibus eius.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius architecto ipsa commodi at tenetur beatae
+              eligendi veniam exercitationem laborum nostrum, nesciunt saepe. Cupiditate quaerat labore impedit et fugit
+              culpa doloremque?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur delectus animi unde reprehenderit!
+              Accusamus quibusdam amet illum eligendi architecto consectetur saepe ea eos aliquam quos voluptatum,
+              adipisci blanditiis impedit necessitatibus!
+            </p>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="row footer">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <h1>THIS FUTURE IS NOW</h1>
+      <div class="buttons" style="flex:auto;">
+        <button class="button">SAVE TAXES</button>
+        <button class="button">GROW MONEY</button>
+      </div>
+    </div>
+  </div>
+</div>

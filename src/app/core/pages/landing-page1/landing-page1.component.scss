@@ -1,0 +1,451 @@
+$color1: #1934a9;
+$color2: #02c29b;
+$color3: #38364c;
+$color4: #9c9c9e;
+$color5: #f4f5f9;
+mat-toolbar {
+  background-color: $color1 !important;
+  padding: 0 4%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  .example-icon {
+    background-color: transparent;
+    border: none;
+    color: #c7ddff;
+    padding: 0 2%;
+  }
+}
+.seccion1 {
+  height: calc(100vh - 64px);
+  background-color: $color1;
+  position: relative;
+  svg {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+  }
+
+  .imgSeccion1 {
+    background-image: url("../../../../assets/landingPage1/ambiente1.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 0 50%;
+    transform: rotateY(180deg);
+  }
+
+  .titles {
+    // transform: scale(0.85);
+    h1 {
+      font-family: "NBold";
+      font-size: 52px;
+      line-height: 65px;
+      color: white;
+    }
+
+    .subtitles {
+      margin: 5% 0;
+
+      p {
+        color: white;
+        font-size: 16px;
+        text-align: start;
+      }
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    // transform: scale(0.85);
+  }
+}
+
+.seccion2 {
+  position: relative;
+  .imgSeccion2 {
+    background-image: url("../../../../assets/landingPage1/ambiente2.svg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.seccion3 {
+  .titles {
+    h2 {
+      color: $color3;
+    }
+    h4 {
+      color: $color4;
+    }
+  }
+  .buttons {
+    button {
+      padding: 15px 10px !important;
+    }
+  }
+  .cardSeccion3 {
+    mat-card-content {
+      margin: 0;
+      text-align: center;
+      .subtitle {
+        color: $color2;
+      }
+      h3 {
+        margin: 0;
+        color: $color3;
+      }
+    }
+    .col-sm-12 {
+      .buttons {
+        button {
+          width: 100%;
+          border: none;
+          padding: 15px 0;
+          font-size: 16px;
+          font-family: "NSemiBold";
+          color: white;
+          background-color: #02c29b;
+          margin: 15px 0;
+        }
+      }
+    }
+
+    mat-card-footer {
+      .buttons {
+        button {
+          width: 50%;
+          border: none;
+          padding: 15px 0;
+          font-size: 16px;
+          font-family: "NSemiBold";
+          color: white;
+          &:nth-child(1) {
+            background-color: white;
+            color: $color3;
+          }
+          &:nth-child(2) {
+            background-color: #02c29b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.seccion4 {
+  background-color: $color5;
+  .imgSeccion4 {
+    background-image: url("../../../../assets/landingPage1/ambiente3.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 40%;
+  }
+  .cards {
+    margin-top: 10%;
+  }
+  button {
+    margin: 2% 0;
+  }
+}
+
+.seccion5 {
+  .cards {
+    margin-top: 10%;
+  }
+  mat-card-header {
+    text-align: center;
+    margin-top: 10%;
+  }
+}
+
+.seccion6 {
+  background-color: $color5;
+  padding-bottom: 20%;
+  position: relative;
+  img {
+    position: absolute;
+    bottom: -1px;
+    left: -10px;
+  }
+  .swiperContent {
+    height: 50vh;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 0 8px -2px $color4;
+    margin: 2% 0;
+    padding: 3%;
+    overflow-y: auto;
+
+    h1 {
+      color: $color3;
+    }
+    h3 {
+      color: $color4;
+    }
+    p {
+      color: $color4;
+      text-align: justify;
+      padding: 2%;
+    }
+  }
+}
+
+.footer {
+  height: 40vh;
+  position: relative;
+  background-color: $color1;
+  h1 {
+    font-family: "NBold";
+    color: white;
+    text-align: center;
+    flex-grow: 2;
+  }
+  .buttons {
+    flex: auto;
+  }
+}
+.mt-seccion {
+  margin-top: 6%;
+}
+
+.cards {
+  height: 90%;
+  mat-card-title {
+    color: $color3;
+    font-family: "NBold";
+    margin-bottom: 25px;
+  }
+  mat-card-subtitle {
+    color: $color4;
+  }
+
+  .rightSide {
+    text-align: end;
+  }
+
+  .imgCard {
+    margin: 5% 0;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+.button {
+  color: white;
+  background-color: $color2;
+  font-size: 14px;
+  padding: 15px 40px;
+  margin: 0 2% 0 0;
+  border: none;
+  border-radius: 35px;
+  font-family: "NBold";
+}
+
+.title1 {
+  width: 100%;
+  h1 {
+    color: $color3;
+    text-align: center;
+    font-family: "NBold";
+    &::after {
+      content: "";
+      display: block;
+      width: 8%;
+      background-color: $color2;
+      height: 5px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.paragraph {
+  color: $color4;
+  text-align: center;
+}
+.buttonGoTo {
+  position: absolute;
+  background: $color2;
+  color: white;
+  bottom: 0;
+  border: 0;
+  border-radius: 50%;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .seccion1 {
+    .titles {
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 35px;
+      }
+      .subtitles {
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .seccion2 {
+    mat-card {
+      position: relative;
+      margin: 15px 0;
+    }
+  }
+  .seccion3 {
+    .titles {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  .seccion5 {
+    .cards {
+      height: 90%;
+      margin: 5% 0 0 0;
+      mat-card-header {
+        margin: 2% 0;
+      }
+      .imgCard {
+        margin: 0;
+        img {
+          width: 20%;
+          height: 20%;
+        }
+      }
+    }
+  }
+  .mt-seccion {
+    margin-top: 10%;
+  }
+
+  .seccion3 {
+    .titles {
+      align-items: center !important;
+    }
+  }
+  .seccion4 {
+    .button {
+      margin: 10% 0;
+    }
+  }
+  .cards {
+    .mat-card-header-text {
+      width: 100%;
+    }
+    mat-card-title {
+      text-align: center;
+    }
+    mat-card-subtitle {
+      text-align: center;
+    }
+
+    .rightSide {
+      text-align: end;
+    }
+
+    .imgCard {
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    .col-12 {
+      flex-direction: column;
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        margin: 5% 0;
+      }
+    }
+  }
+
+  .cards {
+    height: 90%;
+    .imgCard {
+      margin: 5% 0;
+      img {
+        width: 20%;
+        height: 20%;
+      }
+    }
+  }
+
+  .seccion6 {
+    .swiperContent {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .seccion1 {
+    .titles {
+      h1 {
+        font-size: 24px;
+      }
+      .subtitles {
+        p {
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .col-12 {
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: 5% 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .seccion1 {
+    .titles {
+      h1 {
+        margin: 10% 0;
+      }
+      .subtitles {
+        p {
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      button {
+        margin: 3% 0;
+      }
+    }
+  }
+}

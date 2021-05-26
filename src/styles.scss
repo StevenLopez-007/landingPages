@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+@import "styles/breakPointsHidden.scss";
+@import "styles/breakPointsAos.scss";
+@import "~swiper/swiper-bundle";
+@import '~prismjs/themes/prism-pink.scss';
+@import "../node_modules/aos/dist/aos.css";
+// Nunito
+@font-face {
+  font-family: "NRegular";
+  src: url("./fonts/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: "NSemiBold";
+  src: url("./fonts/Nunito-SemiBold.ttf");
+}
+@font-face {
+  font-family: "NBold";
+  src: url("./fonts/Nunito-Bold.ttf");
+}
+
+// Balsamiq
+
+@font-face {
+  font-family: "BalBold";
+  src: url("./fonts/balsamiq/Balsamiq-Bold.ttf");
+}
+
+@font-face {
+  font-family: "BalR";
+  src: url("./fonts/balsamiq/Balsamiq-Regular.ttf");
+}
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: "NRegular",
+  $display-4: mat-typography-level(112px, 112px, 300),
+  $display-3: mat-typography-level(56px, 56px, 400),
+  $display-2: mat-typography-level(45px, 48px, 400),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400),
+);
+
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+@include mat-core($custom-typography);
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "NRegular", "Helvetica Neue", sans-serif;
+
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.row {
+  // height: 450px;
+  flex: 1 1 auto;
+}
+.buttonAuth {
+  padding: 0 10% !important;
+  border-radius: 25px !important;
+  width: 50%;
+  height: 10%;
+  box-shadow: 0 0 12px -2px purple !important;
+}
+
+app-root {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-header-text {
+  width: 100%;
+}
+
+.no-white-space-toogle{
+  mat-slide-toggle{
+    white-space: normal !important;
+  }
+  label{
+    white-space: normal !important;
+    display: flex;
+    align-items: flex-start;
+    span{
+      white-space: normal !important;
+    }
+  }
+}
+button{
+  cursor: pointer;
+}
+
+.routerAnimation{
+  position: relative;
+}
+

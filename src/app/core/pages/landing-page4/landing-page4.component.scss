@@ -1,0 +1,526 @@
+$color1: #1f2937;
+$color2: #dbeafe;
+$color3: #e0478b;
+$color4: #1a6ef4;
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+header {
+  background: linear-gradient(to bottom, $color4 0%, #3f83f8 50%, #3f83f8 50%);
+  position: relative;
+  overflow: hidden;
+}
+.seccion1 {
+  position: relative;
+  overflow: visible;
+
+  > div:first-child {
+    position: relative;
+    z-index: 1000;
+    padding-bottom: 45%;
+    padding-left: 5%;
+    @media only screen and (max-width: 992px) {
+      // padding-left: 2%;
+      padding-right: 5%;
+    }
+    @media only screen and (min-width: 640px) {
+    }
+    @media only screen and (max-width: 480px) {
+      padding-bottom: 67%;
+    }
+  }
+}
+
+.cloud1 {
+  background-image: url("../../../../assets/landingPage4/cloud1.svg");
+  z-index: 5;
+}
+.cloud2 {
+  background-image: url("../../../../assets/landingPage4/cloud2.svg");
+  z-index: 3;
+}
+.cloud3 {
+  background-image: url("../../../../assets/landingPage4/cloud3.svg");
+  z-index: 2;
+}
+.airplane {
+  background-image: url("../../../../assets/landingPage4/airplane.svg");
+  z-index: 4;
+  background-size: auto 50% !important;
+  background-position: bottom right !important;
+  transform: translate(-10%, -25%);
+  @media only screen and (max-width: 1280px) {
+    transform: translate(-10%, -5%);
+  }
+}
+
+.cloud1,
+.cloud2,
+.cloud3,
+.airplane {
+  position: absolute;
+  // height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.titles {
+  padding: 10% 0 0 5%;
+  h2 {
+    font-size: 1.875rem;
+    font-family: "BalBold";
+    color: $color2;
+  }
+  h1,
+  h3 {
+    font-family: "BalBold";
+    font-size: 3.57rem;
+    color: $color1;
+    line-height: 0.7;
+  }
+  h3 {
+    color: white;
+  }
+  p {
+    font-family: "BalR";
+    font-size: 1.25rem;
+    color: $color2;
+  }
+}
+.buttons {
+  button:nth-child(1) {
+    padding: 16px 40px;
+    background-color: $color3;
+    color: white;
+    border: 0;
+    border-radius: 0.375rem;
+    font-size: 1.125rem;
+    font-family: "BalR";
+    transition: 0.25s;
+    &:hover{
+      background-color: white;
+      color: $color4;
+    }
+  }
+  button:nth-child(2) {
+    padding: 16px 40px;
+    background-color: #77b2fb;
+    color: white;
+    border: 0;
+    border-radius: 0.375rem;
+    font-size: 1.125rem;
+    font-family: "BalR";
+    transition: 0.25s;
+    &:hover{
+      background-color: white;
+      color: $color4;
+    }
+  }
+}
+
+// Seccion2
+$colorS2: #c3ddfd;
+$color2S2: #e2e8f0;
+$color3S2: #374151;
+.codeSeccion2 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $colorS2;
+    transform: rotate(-4deg) scale(1.05);
+    border-radius: 25px;
+    z-index: 5;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $color2S2;
+    transform: rotate(4deg) scale(1.05);
+    border-radius: 25px;
+    z-index: 4;
+  }
+  pre {
+    border-radius: 25px;
+    position: relative;
+    transform: rotate(2deg);
+    z-index: 10;
+    overflow: auto;
+  }
+}
+.titles2 {
+  line-height: 2rem;
+  color: $color3S2;
+  h2 {
+    font-size: 2rem;
+    font-family: "BalBold";
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-family: "BalBold";
+    span {
+      color: $color4;
+    }
+  }
+  p {
+    font-size: 1.125rem;
+    span {
+      color: $color4;
+    }
+  }
+  button {
+    // background-color: ;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-family: "BalR";
+    color: rgb(75, 85, 99);
+    transition: 0.25s;
+    &:hover{
+      background-color: rgb(229,231,235);
+    }
+  }
+}
+.subtitle {
+  line-height: 1.75rem !important;
+  font-size: 1.125rem;
+  ol {
+    list-style: none;
+    counter-reset: li;
+    li {
+      margin: 1rem 0;
+      counter-increment: li;
+      &::before {
+        content: counter(li) ".";
+        color: $color3S2;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-family: "BalBold";
+      }
+      span {
+        color: $color4;
+      }
+    }
+  }
+}
+
+// Seccion3
+.seccion3 {
+  padding-bottom: 20rem;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url("../../../../assets/landingPage4/waves.svg");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position-y: 101%;
+  }
+  > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 7rem;
+  }
+  .chip {
+    // transition-duration: .3s;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: rgb(219, 234, 254);
+    color: rgb(75, 85, 99);
+    font-size: 1.125rem;
+    font-family: "BalR";
+    margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
+    mat-icon {
+      color: $color3;
+    }
+  }
+}
+
+// Seccion4
+$colorBgSeccion4: #b39ef7;
+$colorFontSeccion4: #ede9fe;
+.seccion4 {
+  // padding-top: 12rem;
+  position: relative;
+  background-color: $colorBgSeccion4;
+  padding-bottom: 5rem;
+  .titles {
+    p {
+      line-height: 1.25;
+      color: $colorFontSeccion4;
+    }
+  }
+}
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contactForm {
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    h1 {
+      font-size: 1.25rem;
+      color: $color1;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+    mat-slide-toggle {
+      height: auto !important;
+      color: #4e5c73;
+      font-family: "BalRs";
+      font-size: 1rem;
+    }
+    .buttonFormRegister {
+      width: 100%;
+      padding: 1.5rem 0;
+      color: white;
+      font-family: "BalR";
+      margin: 2.5rem 0 0 0;
+      background-color: #2e70f0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: 0.25s;
+      &:hover{
+        background-color: rgb(59,130,246);
+      }
+    }
+  }
+}
+
+// Seccion5 Footer
+$bgFooter: #1f2937;
+$colorTitleList: #9ca3af;
+footer {
+  padding-top: 5rem;
+  background-color: $bgFooter;
+  .container {
+    > div:first-child {
+      border-bottom: 1px solid $colorTitleList;
+    }
+  }
+  h3 {
+    color: $colorTitleList;
+    font-size: 1rem;
+    font-family: "BalBold";
+  }
+  .writeMessage {
+    img {
+      width: 10%;
+      height: 10%;
+      margin: 1.25rem 0;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: $colorTitleList;
+      font-family: "BalR";
+      span {
+        color: white;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: 1px solid white;
+      color: $colorTitleList;
+      font-size: 1rem;
+      font-family: "BalBold";
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      transition: 0.25s;
+      &:hover {
+        background-color: white;
+        color: $bgFooter;
+      }
+    }
+  }
+  .list {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        color: $color2;
+        font-family: "BalR";
+        font-size: 1rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    color: $colorTitleList;
+    font-family: "BalR";
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .titles {
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  header {
+    padding-top: 60%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .titles {
+    text-align: center;
+    h1,
+    h3 {
+      font-size: 2.75rem;
+    }
+    p {
+      max-width: 36rem;
+      margin: 0 auto 0 auto;
+    }
+  }
+  .airplane {
+    transform: translate(-35%, 10%);
+  }
+  .seccion3 {
+    display: flex;
+    flex-direction: column-reverse;
+    > div:first-child {
+      padding-top: 2rem;
+    }
+  }
+
+  footer {
+    .container{
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+
+    }
+    .writeMessage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .list{
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .airplane {
+    background-size: auto 30% !important;
+    transform: translate(-35%, 1%);
+  }
+}
+@media only screen and (max-width: 668px) {
+  .titles {
+    h1,
+    h3 {
+      font-size: 1.75rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .titles2 {
+    line-height: 1.5rem;
+    button {
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    .subtitle {
+      padding: 0 !important;
+      margin: 2rem 0 !important;
+    }
+    button {
+      margin-top: 1rem;
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    button {
+      margin: 10px 0 10px 0 !important;
+    }
+  }
+  .seccion3 {
+    padding-bottom: 8rem;
+    > div:first-child {
+      display: block;
+    }
+    .chip {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  form {
+    .contactForm {
+      width: 100%;
+      padding: 1.25rem;
+      .buttonFormRegister {
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:578px){
+  footer{
+    .writeMessage{
+      img{
+        width: 20%;
+        height: auto;
+      }
+    }
+    .list{
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+  }
+}

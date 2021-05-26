@@ -1,0 +1,58 @@
+.sideBarContainer {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  // left: -100%;
+
+}
+.sideBarOverlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.25s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.sideBar {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: 0.25s;
+  .title {
+    padding: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h2 {
+      text-align: center;
+      font-family: "NBold";
+      margin: 0 !important;
+    }
+  }
+
+  .links {
+    ul li {
+      list-style: none;
+      font-family: "NSemiBold";
+      margin: 8% 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.showSideBar {
+  left: 0% !important;
+  .sideBarOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .sideBar {
+    transform: translateX(0%);
+  }
+}
+
+.closeIcon{
+  cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.seccion1 {
+  height: 100vh;
+  background-color: gray;
+  min-height: 500px;
+  .col-lg-3 {
+    cursor: pointer;
+    padding: 0;
+    transition: 0.25s;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      transition: 0.25s;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+      // z-index: 1000;
+      &::after {
+        background-color: transparent;
+      }
+      .info{
+        transform: translateY(0);
+      }
+    }
+  }
+  @for $i from 1 to 5 {
+    .col-lg-3:nth-child(#{$i}) {
+      // z-index: #{$i};
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('../../../../assets/landingPages/lp'+#{$i}+'.png');
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.25s;
+  height: 20%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-100%);
+  h1{
+    font-family: "NBold";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seccion1 {
+    .col-lg-3 {
+      box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.2);
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

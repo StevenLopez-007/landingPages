@@ -1,0 +1,148 @@
+<div class="container-fluid">
+  <div class="row seccion1">
+    <div class="col-lg-6 subseccion1 flex-column d-flex justify-content-center align-items-center">
+      <div class="col-7 d-flex justify-content-center align-items-center">
+        <div class="titles">
+          <h2 data-aos-delay="0" data-aos="zoom-in-up">THE BEST WAY TO</h2>
+          <h1 data-aos-delay="200" data-aos="zoom-in-up">PROMOTE</h1>
+          <h3 data-aos-delay="400" data-aos="zoom-in-up">YOUR BUSINESS!</h3>
+          <p data-aos-delay="600" data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem reiciendis expedita maiores
+            rerum dignissimos aperiam aut, officia accusantium temporibus.</p>
+        </div>
+      </div>
+    </div>
+    <button data-aos-delay="800" data data-aos-offset="0" data-aos="zoom-in-up" class="buttonSeccion1">DOWNLOAD</button>
+    <div id="imgFade" class="col-lg-5 p-0 subseccion2 hidden-md-down animate">
+
+    </div>
+    <div class="col-lg-1 subseccion3 hidden-md-down">
+
+    </div>
+  </div>
+
+
+  <!-- Seccion2 -->
+  <div class="row seccion2 mt-seccion ">
+    <div class="col-lg-6 mt-5 subseccion2 flex-column d-flex justify-content-center align-items-center">
+      <div class="col-7 d-flex justify-content-center align-items-center">
+        <div data-aos="zoom-in" class="titles">
+          <h2>WE HAVE GREAT</h2>
+          <h1>FEATURES</h1>
+          <h3>THAT YOU NEED</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem reiciendis expedita maiores
+            rerum dignissimos aperiam aut, officia accusantium temporibus.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 d-flex justify-content-center align-items-center">
+      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-md-5 mt-sm-5 mt-5">
+        <div [attr.data-aos-delay]="(i+1)*200" data-aos="zoom-out" class="col mt-3 mb-3 m-sm-0" *ngFor="let item of contentSeccion2Cards;let i = index">
+          <mat-card class="mat-elevation-z0 cards">
+            <div class="d-flex justify-content-center align-items-cente">
+              <img mat-card-image [src]="item.img" alt="">
+            </div>
+            <mat-card-header>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion3 -->
+
+  <div class="row seccion3 mt-seccion">
+
+    <h1 class="pt-5 title1">BEST SERVICE WE PROVIDE</h1>
+
+    <div class="col-lg-12x|">
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 cardsMargin">
+        <div [attr.data-aos-delay]="i*100" data-aos="fade-down" class="col" *ngFor="let item of contentSeccion3Cards;let i = index">
+          <mat-card class="mat-elevation-z0 cardsTransparent">
+            <mat-card-header>
+              <div mat-card-avatar class="avatar">
+                <img [src]="item.img" alt="avatar">
+              </div>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-card-subtitle>{{item.content}}</mat-card-subtitle>
+            </mat-card-header>
+
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion4 -->
+  <div class="row seccion4 pt-seccion">
+    <h1 class="title1 ">TESTIMONIAL</h1>
+    <div data-aos-delay-none [attr.data-aos-delay]="i*200" data-aos="zoom-in" class="col-lg-4" *ngFor="let item of [0,0,0];let i= index">
+      <mat-card class="mat-elevation-z0 pt-4 cardsTransparent">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon *ngFor="let item of [0,0,0,0,0]">star</mat-icon>
+          </mat-card-title>
+          <!-- <mat-card-subtitle>sub-header</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo repellat quam quidem doloribus. Quasi
+            cupiditate praesentium pariatur nam deleniti? Similique saepe nostrum in accusamus officia. Quaerat eos
+            accusantium sint quidem.</p>
+        </mat-card-content>
+        <div>
+          <h3>MR. STEVEN LOPEZ</h3>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="row footer">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-3 col-md-12 p-md-4 p-sm-4 p-4">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores impedit similique numquam iure obcaecati
+      aut quos hic cum, corrupti itaque veritatis eos maiores, inventore molestias quia reiciendis placeat labore.
+    </div>
+    <div class="col-lg-3 d-flex flex-column justify-content-center align-items-start align-item-lg-center">
+      <mat-card class="mat-elevation-z0 cardsTransparent">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>call</mat-icon>
+          </div>
+          <mat-card-subtitle>60606060</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-card class="mat-elevation-z0 cardsTransparent">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>call</mat-icon>
+          </div>
+          <mat-card-subtitle>60606060</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="col-lg-3 d-flex flex-column justify-content-center align-items-start align-item-lg-center">
+      <mat-card class="mat-elevation-z0 cardsTransparent">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>call</mat-icon>
+          </div>
+          <mat-card-subtitle>60606060</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-card class="mat-elevation-z0 cardsTransparent">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>call</mat-icon>
+          </div>
+          <mat-card-subtitle>60606060</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+</div>

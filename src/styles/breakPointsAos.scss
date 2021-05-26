@@ -1,0 +1,11 @@
+@media (max-width:992px){
+  [data-aos-delay-none].aos-animate{
+    transition-delay: 0s !important;
+  }
+}
+
+@media (max-width:768px){
+  [data-aos-delay-none].aos-animate{
+    transition-delay: 0s !important;
+  }
+}

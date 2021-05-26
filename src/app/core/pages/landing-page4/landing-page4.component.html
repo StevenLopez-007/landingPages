@@ -1,0 +1,174 @@
+<div class="container-fluid p-0">
+  <header #seccion1>
+    <div class="cloud1"></div>
+    <div class="cloud2" #cloud2></div>
+    <div class="cloud3" #cloud3></div>
+    <div class="row cont">
+      <div class="row seccion1">
+        <div class=" pl-lg-5 col-lg-12 col-xl-6 col-md-12  d-flex justify-content-center">
+          <div class="titles">
+            <h2 data-aos="zoom-in">The Form Engine:</h2>
+            <h1 data-aos-delay="150" data-aos="zoom-in" class="mt-4">Reliable backend for</h1>
+            <h3 data-aos-delay="300" data-aos="zoom-in" class="mt-1">HTML forms!</h3>
+            <p  data-aos-delay="450" data-aos="zoom-in" class="mt-5">
+              Submit your web forms with form.taxi — no programming, PHP scripting,
+              or FormMailer required. Just connect your web form to our backend,
+              and we will take care of storage, spam filtering, and email notification.</p>
+            <div class="buttons mt-4" data-aos-delay="600" data-aos="zoom-in">
+              <button (click)="hola()" >GET STARTED</button>
+              <button class="ml-0 ml-sm-3 ml-md-3">FEATURES</button>
+            </div>
+          </div>
+        </div>
+        <div class="airplane"></div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Seccion2 -->
+  <div class="row seccion2 pt-5 mt-5">
+    <div
+      class="pb-5 pb-md-5 pb-sm-5 col-lg-6 col-md-12 pl-md-5 pl-lg-5 pl-xl-5 d-flex justify-content-start align-items-center">
+      <div class="titles2">
+        <h2 data-aos-delay="0" data-aos="fade-right">get ready</h2>
+        <h1 data-aos-delay="150" data-aos="fade-right">In just <span>2 steps</span>!</h1>
+        <div class="subtitle mt-5 mb-5 pr-5">
+          <ol>
+            <li data-aos-delay="300" data-aos="fade-right">Create your form in HTML with the entry fields you need (such as contact form, order form,or
+              registration form) depending on your requirements. You'll also find ready-made HTML
+              code in our <span>form Templates.</span>
+            </li>
+            <li data-aos-delay="450" data-aos="fade-right">
+              Connect with form.taxi: Register your form on form.taxi and insert the individual send address
+              in the HTML source code.
+            </li>
+          </ol>
+        </div>
+        <p data-aos-delay="600" data-aos="fade-right">And the form is ready to use! <br>
+          You'll find all the setup information in the <br> <span>documentation.</span></p>
+        <div data-aos-delay="750" data-aos="fade-right"><button >REGISTER FORM</button></div>
+      </div>
+    </div>
+    <div data-aos-offset="300" data-aos="zoom-in" class="pt-5 pt-md-4 pt-sm-4 col-lg-6 col-md-12 col-sm-12 col-12 px-4 px-sm-5 px-md-5 px-lg-5">
+      <div class="codeSeccion2">
+        <pre class="language-markup" style="display: flex; margin: 0;">
+          <code [innerHTML]="code" class="language-markup"></code>
+        </pre>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Seccion3 -->
+  <div class="row seccion3 pt-5 mt-5">
+    <div class="col-lg-7">
+      <div data-aos-offset="0" [attr.data-aos-delay]="i*250" data-aos="fade-up" class="chip" *ngFor="let item of chipsSeccion4;let i = index">
+        <mat-icon class="m-1">verified</mat-icon> {{item}} {{i*250}}
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="titles2">
+        <h2 data-aos-delay="150" data-aos="zoom-in">easy & powerful</h2>
+        <h1 data-aos-delay="300" data-aos="zoom-in" style="line-height: 1;"><span>Rich featur set</span> for individual usage.</h1>
+        <p class="pr-0 pr-sm-0 pr-md-0 pr-lg5 pr-xl-5" data-aos-delay="450" data-aos="zoom-in">Messages are always reliably delivered: With form.taxi, you can absolutely
+          submit your online forms securely and reliably. We offer you a comprehensive
+          et of features and settings so that you can customize your forms and transmit them easily.</p>
+        <p class="pr-5 pr-sm-0 pr-md-5 pr-lg5 pr-xl-5" data-aos-delay="450" data-aos="zoom-in">Start with our free basic plan! For extended use, you can switch to our PRO plan at any
+          time. You can find an overview of the plans and features at:</p>
+        <div  data-aos-delay="600" data-aos="zoom-in"><button >FEATURES & PLANS</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion4 -->
+  <div class="row seccion4">
+    <div class="col-lg-4 pl-lg-5">
+      <div class="titles">
+        <h2 data-aos="fade-right">start free </h2>
+        <h1 data-aos="fade-right" data-aos-delay="150" class="mt-4">Basic plan for </h1>
+        <h3 data-aos="fade-right" data-aos-delay="300" class="mt-1">beginners</h3>
+        <p data-aos="fade-right" data-aos-delay="450" class="mt-5">
+          Do you want to register your first form? This is how it works: Enter a suitable form
+          name, such as <i>"Contact form"</i> along with your email address. We will create a free user
+          account for you and send you a message with the activation link. </p>
+        <p data-aos="fade-right" data-aos-delay="450"><b> Do you already have a user account?</b> <br>
+          In the Administration panel, create your new form. </p>
+      </div>
+    </div>
+    <div class="col-lg-8 mt-md-5 mt-sm-5 mt-5">
+      <form data-aos="zoom-in">
+        <div class="contactForm">
+          <div class="titles2">
+            <h2>Register form</h2>
+          </div>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Name of your form</mat-label>
+              <input matInput placeholder="Contact Form">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Outline form field</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-slide-toggle class="no-white-space-toogle">I agree to the Terms of Use and Privacy Policy.
+            </mat-slide-toggle>
+          </p>
+          <div>
+            <mat-slide-toggle class="no-white-space-toogle">I would like to subscribe to the newsletter (we will send
+              only important <br> news, max. of 3 emails per year). </mat-slide-toggle>
+          </div>
+          <button class="buttonFormRegister">REGISTER</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row pb-4">
+        <div class="col-lg-6 col-md-12">
+          <div class="writeMessage">
+            <img src="../../../../assets/landingPage4/paper-plane.svg" alt="">
+            <h1>You have <span>a question</span>?</h1>
+            <button class="d-flex align-items-center">
+              <mat-icon class="mr-3">message</mat-icon> WRITE MESSAGE
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-12 list">
+          <h3>OFFER</h3>
+          <ul>
+            <li>Home Page</li>
+            <li>Features</li>
+            <li>Prices</li>
+            <li>Newsletter</li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-12 list">
+          <h3>Usage</h3>
+          <ul>
+            <li>Documentation</li>
+            <li>Form templates</li>
+            <li>Panel Login</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-12 list">
+          <h3>Legal</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy policy</li>
+            <li>Imprint</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="m-0 py-5">Steven López</h2>
+    </div>
+  </footer>
+</div>
