@@ -17,9 +17,10 @@ $borderRadiusSeccion1: 75px;
 }
 .seccion1 {
   position: relative;
+  height: $heightSeccion1;
   .subseccion1 {
     background-color: $color1;
-    height: $heightSeccion1;
+    // height: $heightSeccion1;
     border-bottom-right-radius: $borderRadiusSeccion1;
     .titles {
       h1 {
@@ -48,7 +49,7 @@ $borderRadiusSeccion1: 75px;
 
   .subseccion2 {
     background-color: $color1;
-    height: $heightSeccion1;
+    // height: $heightSeccion1;
     position: relative;
     &::after {
       content: "";
@@ -63,7 +64,7 @@ $borderRadiusSeccion1: 75px;
   }
   .subseccion3 {
     background-color: $color1;
-    height: $heightSeccion1;
+    // height: $heightSeccion1;
     border-bottom-left-radius: $borderRadiusSeccion1;
   }
 

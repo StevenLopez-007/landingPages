@@ -1,1 +1,12 @@
+<button *ngIf="!router.url.includes('/inicio')" class="lpButton" mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">Inicio</button>
+  <button mat-menu-item routerLink="/lp">Landing Page 1</button>
+  <button mat-menu-item routerLink="/lp2">Landing Page 2</button>
+  <button mat-menu-item routerLink="/lp3">Landing Page 3</button>
+  <button mat-menu-item routerLink="/lp4">Landing Page 4</button>
+</mat-menu>
+
 <router-outlet></router-outlet>

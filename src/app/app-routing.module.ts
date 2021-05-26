@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'inicio',
     loadChildren:()=>import('../app/core/pages/landing-pages/landing-pages.module').then(m=>m.LandingPagesModule),
     data:{
       title:'Landing Pages'
@@ -40,7 +40,7 @@ const routes: Routes = [
 
   {
     path:'**',
-    redirectTo:''
+    redirectTo:'/inicio'
   }
 ];
 

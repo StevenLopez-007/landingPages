@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit{
 
-  constructor (private router: Router, private activatedRoute:ActivatedRoute, private titleService: Title) {
+  constructor (public router: Router, private activatedRoute:ActivatedRoute, private titleService: Title) {
     this.router.events.pipe(
         filter(event => event instanceof NavigationEnd),
         map(() => {

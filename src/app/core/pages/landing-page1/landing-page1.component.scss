@@ -20,6 +20,7 @@ mat-toolbar {
   height: calc(100vh - 64px);
   background-color: $color1;
   position: relative;
+  min-height: calc(700px - 64px);
   svg {
     display: block;
     position: absolute;
